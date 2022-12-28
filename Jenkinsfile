@@ -2,14 +2,14 @@ pipeline
 {
     
   agent any
+    
+  parameters {
+     string(name: 'script_name', description: 'script name to execute')
+    }
 
   stages {
              
-  parameters {
-     string(name: 'script_name')
-  }
 
-      
     stage("Git Checkout"){
         steps{
                 git branch: 'main', credentialsId: 'sahmed448-github-token', url: 'https://github.com/sahmed448/pipeline'
