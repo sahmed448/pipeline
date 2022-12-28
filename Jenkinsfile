@@ -2,9 +2,14 @@ pipeline
 {
     
   agent any
-  
 
   stages {
+      
+    stage("Git Checkout"){
+        steps{
+                git branch: 'main', credentialsId: 'sahmed448-github-token', url: 'https://github.com/sahmed448/pipeline'
+            }
+        } 
       
     stage('version') {
       steps {
