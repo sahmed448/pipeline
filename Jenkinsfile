@@ -12,7 +12,7 @@ pipeline
       
     stage("Git Checkout"){
             steps{
-                git credentialsId: 'sahmed448', url: 'https://github.com/sahmed448/pipeline'
+                git branch: 'main', credentialsId: 'sahmed448-github-token', url: 'https://github.com/sahmed448/pipeline'
             }
         } 
       
