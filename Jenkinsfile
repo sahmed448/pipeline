@@ -4,6 +4,11 @@ pipeline
   agent any
 
   stages {
+             
+  parameters {
+     string(name: 'script_name')
+  }
+
       
     stage("Git Checkout"){
         steps{
@@ -19,7 +24,7 @@ pipeline
     
     stage('hello') {
       steps {
-        sh 'python3  /var/jenkins_home/script1.py'
+        sh 'python3  /var/jenkins_home/$params.script_name'
       }
     }
     
