@@ -20,7 +20,7 @@ pipeline
     
     stage('hello') {
       steps {
-        sh 'python3 ${script_name}'
+        sh 'python3 $script_name'
       }
     }
     
