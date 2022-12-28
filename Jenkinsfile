@@ -3,10 +3,6 @@ pipeline
     
   agent any
   
-  parameters {
-    string description: 'python script to exectute', name: 'script_name'
-    }
-
 
   stages {
       
@@ -18,7 +14,7 @@ pipeline
     
     stage('hello') {
       steps {
-        sh 'python3  /var/jenkins_home/${params.script_name}'
+        sh 'python3  /var/jenkins_home/script1.py'
       }
     }
     
