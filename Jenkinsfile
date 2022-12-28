@@ -10,7 +10,11 @@ pipeline
 
   stages {
       
-      
+    stage("Git Checkout"){
+            steps{
+                git credentialsId: 'sahmed448', url: 'https://github.com/sahmed448/pipeline'
+            }
+        } 
       
     stage('version') {
       steps {
