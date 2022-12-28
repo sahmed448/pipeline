@@ -24,7 +24,7 @@ pipeline
     
     stage('hello') {
       steps {
-        sh 'python3 ${params.script_name}'
+        sh 'python3  /var/jenkins_home/${params.script_name}'
       }
     }
     
